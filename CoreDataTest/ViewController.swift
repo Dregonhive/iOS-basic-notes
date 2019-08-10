@@ -66,7 +66,7 @@ extension ViewController: UITableViewDataSource
         cell.textLabel?.text = (instance.value(forKey: "title") as! String)
         if (instance.value(forKey: "body") == nil)
         {
-            cell.detailTextLabel?.text = "Empty Note" //think of replacing it by date and put "Empty Note" in textLabel
+            cell.detailTextLabel?.text = "Empty Note" //think of replacing it by date and put "Empty Note" in textLabe
         }
         else
         {
