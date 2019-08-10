@@ -13,13 +13,15 @@ var names: [NSManagedObject] = []
 
 class ViewController: UIViewController {
 
-    
+    let searchController = UISearchController(searchResultsController: nil)
     @IBOutlet weak var TableView: UITableView!
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
         title = "List of Notes"
+        navigationItem.searchController = searchController
+        TableView.refreshControl = UIRefreshControl()
         TableView.register(SubtitleTableViewCell.self, forCellReuseIdentifier: "Cell")
     }
     
